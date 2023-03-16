@@ -7,19 +7,17 @@ Molim vas izmijenite ovaj dokument kako biste u njemu naveli naziv i kratak opis
 
 A sada, vrijeme je za prvi korak rada na vašem projektu. 🙂 Za upis/opis vašeg programskog proizvoda molimo vas koristite **predložak** koji je naveden u nastavku. Započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta te izbrišite sve što je iznad _Naziva projekta_, kao i sve upute koje su navedene u zagradama u predlošku ispod.
 
-# Naziv projekta
-(U redak iznad navedite naziv projekta koji ste dobili za analizu!)
+# Softver za praćenje rada obrta za usluge čišćenja
 
 ## Podaci o studentu
 (Ispod promijenite samo drugi redak tablice!)
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
-
+Emanuel Valec | evalec21@foi.hr | 0016156391 | EmanuelValec
 
 ## Opis domene
-(Vlastitim riječima opišite domenu ili problem koji pokriva projekt vaše zadaće!)
+
 
 ## Specifikacija projekta
 (Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
