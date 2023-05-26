@@ -52,6 +52,12 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmWorkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWorkers.Designer.cs">
+      <DependentUpon>FrmWorkers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
