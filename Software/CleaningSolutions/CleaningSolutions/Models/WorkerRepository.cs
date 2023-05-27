@@ -32,21 +32,21 @@ namespace CleaningSolutions.Models
 
         public static List<Worker> GetWorkers()
         {
-            var Workers = new List<Worker>();
-
+            var workers = new List<Worker>();
+            
             string sql = "SELECT * FROM Workers";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
             {
                 Worker worker = CreateObject(reader);
-                Workers.Add(worker);
+                workers.Add(worker);
             }
 
             reader.Close();
             DB.CloseConnection();
 
-            return Workers;
+            return workers;
         }
 
         private static Worker CreateObject(SqlDataReader reader)
