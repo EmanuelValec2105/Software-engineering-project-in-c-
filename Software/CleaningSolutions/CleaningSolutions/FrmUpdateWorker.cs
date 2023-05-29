@@ -19,7 +19,6 @@ namespace CleaningSolutions
             InitializeComponent();
             selectedWorker = worker;
 
-            // Postavi vrijednosti text box-ova na temelju podataka odabranog radnika
             txtUpdateFirstName.Text = selectedWorker.FirstName;
             txtUpdateLastName.Text = selectedWorker.LastName;
             txtUpdatePhoneNumber.Text = selectedWorker.PhoneNumber;
@@ -31,17 +30,14 @@ namespace CleaningSolutions
             string updatedLastName = txtUpdateLastName.Text;
             string updatedPhoneNumber = txtUpdatePhoneNumber.Text;
 
-            // Provjeri jesu li uneseni podaci valjani
             if (string.IsNullOrWhiteSpace(updatedFirstName) || string.IsNullOrWhiteSpace(updatedLastName) || string.IsNullOrWhiteSpace(updatedPhoneNumber))
             {
                 MessageBox.Show("Molimo unesite sve podatke.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Ažuriraj podatke radnika u bazi podataka
             Models.WorkerRepository.UpdateWorker(selectedWorker.Id, updatedFirstName, updatedLastName, updatedPhoneNumber);
 
-            // Zatvori formu
             this.Close();
         }
     }

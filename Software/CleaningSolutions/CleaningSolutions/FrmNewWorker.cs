@@ -22,22 +22,17 @@ namespace CleaningSolutions
             string ime = txtNewFirstName.Text;
             string prezime = txtNewLastName.Text;
             string kontakt = txtNewPhone.Text;
-
-            // Provjera unesenih podataka
             if (string.IsNullOrWhiteSpace(ime) || string.IsNullOrWhiteSpace(prezime) || string.IsNullOrWhiteSpace(kontakt))
             {
                 MessageBox.Show("Molimo unesite sve podatke.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Dodavanje radnika u bazu podataka
             Models.WorkerRepository.AddWorker(ime, prezime, kontakt);
 
-            // Osvježavanje prikaza DataGridView-a u formi "FrmWorkers"
             FrmWorkers frmWorkers = (FrmWorkers)Application.OpenForms["FrmWorkers"];
             frmWorkers.ShowWorkers();
 
-            // Zatvaranje forme
             this.Close();
         }
     }

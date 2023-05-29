@@ -114,6 +114,7 @@ namespace CleaningSolutions
             this.Controls.Add(this.lblNewLastName);
             this.Controls.Add(this.lblNewFirstName);
             this.Name = "FrmNewWorker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novi zaposlenik";
             this.ResumeLayout(false);
             this.PerformLayout();
