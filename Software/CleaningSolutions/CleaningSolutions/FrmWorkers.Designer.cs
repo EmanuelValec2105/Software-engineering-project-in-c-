@@ -30,6 +30,8 @@ namespace CleaningSolutions
         private void InitializeComponent()
         {
             this.dgvWorkers = new System.Windows.Forms.DataGridView();
+            this.btnNewWorker = new System.Windows.Forms.Button();
+            this.btnDeleteWorker = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,14 +44,36 @@ namespace CleaningSolutions
             this.dgvWorkers.Name = "dgvWorkers";
             this.dgvWorkers.RowHeadersWidth = 51;
             this.dgvWorkers.RowTemplate.Height = 24;
-            this.dgvWorkers.Size = new System.Drawing.Size(831, 298);
+            this.dgvWorkers.Size = new System.Drawing.Size(839, 297);
             this.dgvWorkers.TabIndex = 0;
+            // 
+            // btnNewWorker
+            // 
+            this.btnNewWorker.Location = new System.Drawing.Point(10, 337);
+            this.btnNewWorker.Name = "btnNewWorker";
+            this.btnNewWorker.Size = new System.Drawing.Size(183, 47);
+            this.btnNewWorker.TabIndex = 1;
+            this.btnNewWorker.Text = "Dodaj novog zaposlenika";
+            this.btnNewWorker.UseVisualStyleBackColor = true;
+            this.btnNewWorker.Click += new System.EventHandler(this.btnNewWorker_Click);
+            // 
+            // btnDeleteWorker
+            // 
+            this.btnDeleteWorker.Location = new System.Drawing.Point(221, 337);
+            this.btnDeleteWorker.Name = "btnDeleteWorker";
+            this.btnDeleteWorker.Size = new System.Drawing.Size(183, 47);
+            this.btnDeleteWorker.TabIndex = 2;
+            this.btnDeleteWorker.Text = "Izbriši zaposlenika";
+            this.btnDeleteWorker.UseVisualStyleBackColor = true;
+            this.btnDeleteWorker.Click += new System.EventHandler(this.btnDeleteWorker_Click);
             // 
             // FrmWorkers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 621);
+            this.ClientSize = new System.Drawing.Size(861, 409);
+            this.Controls.Add(this.btnDeleteWorker);
+            this.Controls.Add(this.btnNewWorker);
             this.Controls.Add(this.dgvWorkers);
             this.Name = "FrmWorkers";
             this.Text = "FrmWorkers";
@@ -60,7 +84,8 @@ namespace CleaningSolutions
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvWorkers;
+        private System.Windows.Forms.Button btnNewWorker;
+        public System.Windows.Forms.DataGridView dgvWorkers;
+        private System.Windows.Forms.Button btnDeleteWorker;
     }
 }

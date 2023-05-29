@@ -32,7 +32,7 @@ namespace CleaningSolutions.Models
 
         public static List<Worker> GetWorkers()
         {
-            var workers = new List<Worker>();
+            List<Worker> workers = new List<Worker>();
             
             string sql = "SELECT * FROM Workers";
             DB.OpenConnection();
@@ -49,7 +49,7 @@ namespace CleaningSolutions.Models
             return workers;
         }
 
-        private static Worker CreateObject(SqlDataReader reader)
+        public static Worker CreateObject(SqlDataReader reader)
         {
             int id = int.Parse(reader["Id"].ToString());
             string firstName = reader["FirstName"].ToString();
@@ -65,6 +65,22 @@ namespace CleaningSolutions.Models
             };
 
             return worker;
+        }
+
+        public static void AddWorker(string firstName, string lastName, string phoneNumber)
+        {
+            string sql = $"INSERT into Workers (FirstName, LastName, PhoneNumber) VALUES ('{firstName}', '{lastName}', '{phoneNumber}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+        public static void DeleteWorker(int Id)
+        {
+            string sql = $"DELETE FROM Workers WHERE Id = {Id}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
         }
     }
 }
