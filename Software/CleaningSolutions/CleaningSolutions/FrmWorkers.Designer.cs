@@ -147,6 +147,7 @@ namespace CleaningSolutions
             this.Controls.Add(this.btnNewWorker);
             this.Controls.Add(this.dgvWorkers);
             this.Name = "FrmWorkers";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cleaning Solutions";
             this.Load += new System.EventHandler(this.FrmWorkers_Load);

@@ -16,6 +16,12 @@ namespace CleaningSolutions
         {
             InitializeComponent();
             dgvWorkers.RowTemplate.Height = 30;
+            dgvWorkers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
+            foreach (DataGridViewColumn column in dgvWorkers.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            dgvWorkers.DefaultCellStyle.Font = new Font("Microsoft sanf serif", 12);
         }
 
         private void FrmWorkers_Load(object sender, EventArgs e)
@@ -44,13 +50,8 @@ namespace CleaningSolutions
         {
             if (dgvWorkers.SelectedRows.Count > 0)
             {
-                // Dohvati ID odabranog radnika
                 int selectedWorkerId = (int)dgvWorkers.SelectedRows[0].Cells["Id"].Value;
-
-                // Izvrši SQL naredbu za brisanje radnika iz baze podataka
                 Models.WorkerRepository.DeleteWorker(selectedWorkerId);
-
-                // Osvježi prikaz DataGridView-a
                 ShowWorkers();
             }
         }
@@ -59,14 +60,9 @@ namespace CleaningSolutions
         {
             if (dgvWorkers.SelectedRows.Count > 0)
             {
-                // Dohvati odabrani radnik
                 Models.Worker selectedWorker = (Models.Worker)dgvWorkers.SelectedRows[0].DataBoundItem;
-
-                // Otvaranje forme za ažuriranje radnika
                 FrmUpdateWorker frmUpdateWorker = new FrmUpdateWorker(selectedWorker);
                 frmUpdateWorker.ShowDialog();
-
-                // Osvježi prikaz DataGridView-a
                 ShowWorkers();
             }
         }
@@ -74,15 +70,11 @@ namespace CleaningSolutions
         private void btnSeacrh_Click(object sender, EventArgs e)
         {
             string searchCriteria = txtSearch.Text;
-
-            // Pozovite metodu za prikaz radnika s primijenjenim pretraživanjem
             ShowWorkers(searchCriteria);
         }
         private void ShowWorkers(string searchCriteria = null)
         {
             List<Models.Worker> workers = Models.WorkerRepository.GetWorkers();
-
-            // Primijeni filtriranje na temelju kriterija pretraživanja, ako je dostupan
             if (!string.IsNullOrEmpty(searchCriteria))
             {
                 workers = workers.Where(w => w.FirstName.Contains(searchCriteria) || w.LastName.Contains(searchCriteria)).ToList();
