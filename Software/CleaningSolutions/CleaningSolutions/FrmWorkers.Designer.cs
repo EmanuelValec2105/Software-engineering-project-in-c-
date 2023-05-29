@@ -42,22 +42,20 @@ namespace CleaningSolutions
             // 
             // dgvWorkers
             // 
-            this.dgvWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvWorkers.Location = new System.Drawing.Point(10, 226);
             this.dgvWorkers.Name = "dgvWorkers";
             this.dgvWorkers.RowHeadersWidth = 51;
             this.dgvWorkers.RowTemplate.Height = 24;
-            this.dgvWorkers.Size = new System.Drawing.Size(803, 704);
+            this.dgvWorkers.Size = new System.Drawing.Size(977, 482);
             this.dgvWorkers.TabIndex = 0;
             // 
             // btnNewWorker
             // 
-            this.btnNewWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNewWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnNewWorker.Location = new System.Drawing.Point(12, 936);
+            this.btnNewWorker.Location = new System.Drawing.Point(10, 732);
             this.btnNewWorker.Name = "btnNewWorker";
             this.btnNewWorker.Size = new System.Drawing.Size(230, 60);
             this.btnNewWorker.TabIndex = 1;
@@ -67,9 +65,8 @@ namespace CleaningSolutions
             // 
             // btnDeleteWorker
             // 
-            this.btnDeleteWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDeleteWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDeleteWorker.Location = new System.Drawing.Point(294, 936);
+            this.btnDeleteWorker.Location = new System.Drawing.Point(401, 732);
             this.btnDeleteWorker.Name = "btnDeleteWorker";
             this.btnDeleteWorker.Size = new System.Drawing.Size(231, 60);
             this.btnDeleteWorker.TabIndex = 2;
@@ -79,9 +76,8 @@ namespace CleaningSolutions
             // 
             // btnUpdateWorker
             // 
-            this.btnUpdateWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnUpdateWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnUpdateWorker.Location = new System.Drawing.Point(586, 936);
+            this.btnUpdateWorker.Location = new System.Drawing.Point(759, 732);
             this.btnUpdateWorker.Name = "btnUpdateWorker";
             this.btnUpdateWorker.Size = new System.Drawing.Size(228, 60);
             this.btnUpdateWorker.TabIndex = 3;
@@ -96,14 +92,14 @@ namespace CleaningSolutions
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtSearch.Location = new System.Drawing.Point(10, 165);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(645, 30);
+            this.txtSearch.Size = new System.Drawing.Size(817, 30);
             this.txtSearch.TabIndex = 4;
             // 
             // btnSeacrh
             // 
             this.btnSeacrh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSeacrh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnSeacrh.Location = new System.Drawing.Point(661, 157);
+            this.btnSeacrh.Location = new System.Drawing.Point(833, 157);
             this.btnSeacrh.Name = "btnSeacrh";
             this.btnSeacrh.Size = new System.Drawing.Size(144, 47);
             this.btnSeacrh.TabIndex = 5;
@@ -115,7 +111,7 @@ namespace CleaningSolutions
             // 
             this.lblNaslov.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNaslov.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblNaslov.Location = new System.Drawing.Point(296, 28);
+            this.lblNaslov.Location = new System.Drawing.Point(382, 28);
             this.lblNaslov.Name = "lblNaslov";
             this.lblNaslov.Size = new System.Drawing.Size(509, 78);
             this.lblNaslov.TabIndex = 6;
@@ -130,14 +126,14 @@ namespace CleaningSolutions
             this.panel1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel1.Location = new System.Drawing.Point(10, 99);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 10);
+            this.panel1.Size = new System.Drawing.Size(977, 10);
             this.panel1.TabIndex = 7;
             // 
             // FrmWorkers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 1008);
+            this.ClientSize = new System.Drawing.Size(997, 815);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNaslov);
             this.Controls.Add(this.btnSeacrh);
