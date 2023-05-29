@@ -82,5 +82,13 @@ namespace CleaningSolutions.Models
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
         }
+
+        public static void UpdateWorker(int Id, string updatedFirstName, string updatedLastName, string updatedPhoneNumber)
+        {
+            string sql = $"UPDATE Workers SET FirstName = '{updatedFirstName}', LastName = '{updatedLastName}', PhoneNumber = '{updatedPhoneNumber}' WHERE Id = {Id}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
     }
 }

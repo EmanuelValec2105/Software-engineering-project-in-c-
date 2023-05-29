@@ -53,5 +53,21 @@ namespace CleaningSolutions
                 ShowWorkers();
             }
         }
+
+        private void btnUpdateWorker_Click(object sender, EventArgs e)
+        {
+            if (dgvWorkers.SelectedRows.Count > 0)
+            {
+                // Dohvati odabrani radnik
+                Models.Worker selectedWorker = (Models.Worker)dgvWorkers.SelectedRows[0].DataBoundItem;
+
+                // Otvaranje forme za ažuriranje radnika
+                FrmUpdateWorker frmUpdateWorker = new FrmUpdateWorker(selectedWorker);
+                frmUpdateWorker.ShowDialog();
+
+                // Osvježi prikaz DataGridView-a
+                ShowWorkers();
+            }
+        }
     }
 }

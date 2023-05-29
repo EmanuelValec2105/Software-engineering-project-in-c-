@@ -35,7 +35,7 @@ namespace CleaningSolutions
             this.txtNewFirstName = new System.Windows.Forms.TextBox();
             this.txtNewLastName = new System.Windows.Forms.TextBox();
             this.txtNewPhone = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInsertWorker = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNewFirstName
@@ -90,23 +90,23 @@ namespace CleaningSolutions
             this.txtNewPhone.Size = new System.Drawing.Size(160, 22);
             this.txtNewPhone.TabIndex = 5;
             // 
-            // button1
+            // btnInsertWorker
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(58, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 38);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Spremi";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnSaveChanges);
+            this.btnInsertWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnInsertWorker.Location = new System.Drawing.Point(58, 326);
+            this.btnInsertWorker.Name = "btnInsertWorker";
+            this.btnInsertWorker.Size = new System.Drawing.Size(160, 38);
+            this.btnInsertWorker.TabIndex = 6;
+            this.btnInsertWorker.Text = "Unesi";
+            this.btnInsertWorker.UseVisualStyleBackColor = true;
+            this.btnInsertWorker.Click += new System.EventHandler(this.btnSaveChanges);
             // 
             // FrmNewWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 426);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnInsertWorker);
             this.Controls.Add(this.txtNewPhone);
             this.Controls.Add(this.txtNewLastName);
             this.Controls.Add(this.txtNewFirstName);
@@ -125,7 +125,7 @@ namespace CleaningSolutions
         private System.Windows.Forms.Label lblNewFirstName;
         private System.Windows.Forms.Label lblNewLastName;
         private System.Windows.Forms.Label lblNewPhone;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInsertWorker;
         public System.Windows.Forms.TextBox txtNewFirstName;
         public System.Windows.Forms.TextBox txtNewLastName;
         public System.Windows.Forms.TextBox txtNewPhone;
