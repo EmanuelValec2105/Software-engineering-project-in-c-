@@ -15,6 +15,7 @@ namespace CleaningSolutions
         public FrmWorkers()
         {
             InitializeComponent();
+            dgvWorkers.RowTemplate.Height = 30;
         }
 
         private void FrmWorkers_Load(object sender, EventArgs e)
