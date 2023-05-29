@@ -69,5 +69,29 @@ namespace CleaningSolutions
                 ShowWorkers();
             }
         }
+
+        private void btnSeacrh_Click(object sender, EventArgs e)
+        {
+            string searchCriteria = txtSearch.Text;
+
+            // Pozovite metodu za prikaz radnika s primijenjenim pretraživanjem
+            ShowWorkers(searchCriteria);
+        }
+        private void ShowWorkers(string searchCriteria = null)
+        {
+            List<Models.Worker> workers = Models.WorkerRepository.GetWorkers();
+
+            // Primijeni filtriranje na temelju kriterija pretraživanja, ako je dostupan
+            if (!string.IsNullOrEmpty(searchCriteria))
+            {
+                workers = workers.Where(w => w.FirstName.Contains(searchCriteria) || w.LastName.Contains(searchCriteria)).ToList();
+            }
+
+            dgvWorkers.DataSource = workers;
+            dgvWorkers.Columns["Id"].Visible = false;
+            dgvWorkers.Columns["FirstName"].DisplayIndex = 0;
+            dgvWorkers.Columns["LastName"].DisplayIndex = 1;
+            dgvWorkers.Columns["PhoneNumber"].DisplayIndex = 2;
+        }
     }
 }

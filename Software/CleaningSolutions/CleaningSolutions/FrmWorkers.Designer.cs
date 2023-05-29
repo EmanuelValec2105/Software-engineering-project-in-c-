@@ -34,7 +34,7 @@ namespace CleaningSolutions
             this.btnDeleteWorker = new System.Windows.Forms.Button();
             this.btnUpdateWorker = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSeacrh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,13 +48,13 @@ namespace CleaningSolutions
             this.dgvWorkers.Name = "dgvWorkers";
             this.dgvWorkers.RowHeadersWidth = 51;
             this.dgvWorkers.RowTemplate.Height = 24;
-            this.dgvWorkers.Size = new System.Drawing.Size(665, 355);
+            this.dgvWorkers.Size = new System.Drawing.Size(647, 413);
             this.dgvWorkers.TabIndex = 0;
             // 
             // btnNewWorker
             // 
             this.btnNewWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNewWorker.Location = new System.Drawing.Point(10, 458);
+            this.btnNewWorker.Location = new System.Drawing.Point(10, 516);
             this.btnNewWorker.Name = "btnNewWorker";
             this.btnNewWorker.Size = new System.Drawing.Size(183, 47);
             this.btnNewWorker.TabIndex = 1;
@@ -65,7 +65,7 @@ namespace CleaningSolutions
             // btnDeleteWorker
             // 
             this.btnDeleteWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDeleteWorker.Location = new System.Drawing.Point(221, 458);
+            this.btnDeleteWorker.Location = new System.Drawing.Point(221, 516);
             this.btnDeleteWorker.Name = "btnDeleteWorker";
             this.btnDeleteWorker.Size = new System.Drawing.Size(183, 47);
             this.btnDeleteWorker.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace CleaningSolutions
             // btnUpdateWorker
             // 
             this.btnUpdateWorker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnUpdateWorker.Location = new System.Drawing.Point(429, 458);
+            this.btnUpdateWorker.Location = new System.Drawing.Point(429, 516);
             this.btnUpdateWorker.Name = "btnUpdateWorker";
             this.btnUpdateWorker.Size = new System.Drawing.Size(183, 47);
             this.btnUpdateWorker.TabIndex = 3;
@@ -91,21 +91,22 @@ namespace CleaningSolutions
             this.txtSearch.Size = new System.Drawing.Size(264, 22);
             this.txtSearch.TabIndex = 4;
             // 
-            // button1
+            // btnSeacrh
             // 
-            this.button1.Location = new System.Drawing.Point(294, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 35);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Pretraži";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSeacrh.Location = new System.Drawing.Point(294, 16);
+            this.btnSeacrh.Name = "btnSeacrh";
+            this.btnSeacrh.Size = new System.Drawing.Size(123, 35);
+            this.btnSeacrh.TabIndex = 5;
+            this.btnSeacrh.Text = "Pretraži";
+            this.btnSeacrh.UseVisualStyleBackColor = true;
+            this.btnSeacrh.Click += new System.EventHandler(this.btnSeacrh_Click);
             // 
             // FrmWorkers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 530);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(669, 588);
+            this.Controls.Add(this.btnSeacrh);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnUpdateWorker);
             this.Controls.Add(this.btnDeleteWorker);
@@ -126,6 +127,6 @@ namespace CleaningSolutions
         private System.Windows.Forms.Button btnDeleteWorker;
         private System.Windows.Forms.Button btnUpdateWorker;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSeacrh;
     }
 }
